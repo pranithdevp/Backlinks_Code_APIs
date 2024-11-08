@@ -1,12 +1,12 @@
-// models/Competitor.js
+// models/SuspiciousActivity.js
 const mongoose = require('mongoose');
 
-const competitorSchema = new mongoose.Schema({
-    name: String,
-    traffic: Number,
-    backlinks: Number,
-    keywords: Number,
-    timestamp: Date,
+const suspiciousActivitySchema = new mongoose.Schema({
+    ip: String,
+    requestBody: String,
+    requestParams: String,
+    requestQuery: String,
+    timestamp: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model('Competitor', competitorSchema);
+module.exports = mongoose.model('SuspiciousActivity', suspiciousActivitySchema);
