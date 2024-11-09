@@ -1,0 +1,24 @@
+## API Documentation
+
+### Track Page View
+- **Endpoint**: `/track-page-view`
+- **Method**: POST
+- **Parameters**:
+  - `userId`: User identifier
+  - `pageUrl`: URL of the page viewed
+- **Description**: Logs a page view event.
+
+### Track Button Click
+- **Endpoint**: `/track-button-click`
+- **Method**: POST
+- **Parameters**:
+  - `userId`: User identifier
+  - `elementId`: Identifier for the button clicked
+  - `pageUrl`: URL of the page
+- **Description**: Logs a button click event.
+
+...
+
+### WebSocket Real-Time Tracking
+- **URL**: `ws://<your-server>/`
+- **Description**: Connect to receive real-time updates of user actions.
